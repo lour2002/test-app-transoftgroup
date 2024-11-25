@@ -31,6 +31,7 @@ export const useUsersStore = defineStore('users', () => {
   return {
     users,
     page,
+    prevPage,
     loading,
     fetchUsers,
   }

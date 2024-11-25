@@ -15,6 +15,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
+  <NuxtLink to="/users">User List</NuxtLink>
   <h1>TODO | # {{params.id}}</h1>
   <ToDoList :list="todoList" :loading="loading" />
 </template>

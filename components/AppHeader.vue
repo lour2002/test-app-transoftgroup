@@ -3,11 +3,6 @@
 <template>
   <header class="header">
     <div class="header__logo">LOGO</div>
-    <nav>
-      <NuxtLink to="/users">
-        User list
-      </NuxtLink>
-    </nav>
   </header>
 </template>
 
