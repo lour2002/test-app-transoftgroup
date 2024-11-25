@@ -1,4 +1,5 @@
 import {useAsyncData} from "#app";
+import type {IUser} from "~/type/user";
 
 export const useUsersStore = defineStore('users', () => {
   const limit = ref(5)
@@ -13,12 +14,12 @@ export const useUsersStore = defineStore('users', () => {
     {
       deep: false,
       default: () => [],
-      transform: (data) => {
-        console.log(data)
-        return data.map((user: any) => ({
+      transform: (data): IUser[] => {
+        return data.map((user: any): IUser => ({
           id: user.id,
           name: user.name,
           email: user.email,
+          phone: user.phone
         }))
       },
       watch: [page]

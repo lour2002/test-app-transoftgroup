@@ -8,7 +8,7 @@ const { users } = storeToRefs(usersStore);
 
 <template>
 <h1>Users</h1>
-  {{ users }}
+<UserTableList :list="users" />
 </template>
 
 <style scoped>
