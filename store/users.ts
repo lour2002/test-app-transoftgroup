@@ -26,10 +26,12 @@ export const useUsersStore = defineStore('users', () => {
     }
   )
 
+  const loading = computed(() => status.value === 'pending')
+
   return {
     users,
     page,
-    status,
+    loading,
     fetchUsers,
   }
 })
