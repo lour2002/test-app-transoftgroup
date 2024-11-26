@@ -23,7 +23,7 @@ export const useUsersStore = defineStore('users', () => {
         }))
       },
       watch: [page]
-    }
+    },
   )
 
   const loading = computed(() => status.value === 'pending')
