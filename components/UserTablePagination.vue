@@ -4,10 +4,9 @@ const page = defineModel<number>()
 
 <template>
   <div class="user-list__pagination">
-    <button class="pagination-item" :class="{ 'pagination-item--active': page == 1 }" @click="page = 1">1</button>
+    <button class="pagination-item" :class="{ 'pagination-item--active': page == 1 || !page }" @click="page = 1">1</button>
     <button class="pagination-item" :class="{ 'pagination-item--active': page == 2 }" @click="page = 2">2</button>
     <button class="pagination-item" :class="{ 'pagination-item--active': page == 3 }" @click="page = 3">3</button>
-    <button class="pagination-item" :class="{ 'pagination-item--active': page == 4 }" @click="page = 4">4</button>
   </div>
 </template>
 
